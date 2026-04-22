@@ -12,7 +12,7 @@ Order-dependent (OD) tests are tests that pass or fail depending on the order in
     
     ```bash
     git clone https://github.com/professordjkim/repositoryToAuditFlakyTest.git
-    cd fastjson
+    cd repositoryToAuditFlakyTest
     ```
 
 2. Run the default test suite using the dockerfile:
