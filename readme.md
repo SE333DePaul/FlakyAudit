@@ -11,7 +11,7 @@ Order-dependent (OD) tests are tests that pass or fail depending on the order in
 1. Clone the archived project:
     
     ```bash
-    git clone https://github.com/SE333DePaul/fastjson.git
+    git clone https://github.com/professordjkim/repositoryToAuditFlakyTest.git
     cd fastjson
     ```
 
