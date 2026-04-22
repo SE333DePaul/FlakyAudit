@@ -13,20 +13,23 @@ Order-dependent (OD) tests are tests that pass or fail depending on the order in
     ```bash
     git clone https://github.com/SE333DePaul/fastjson.git
     cd fastjson
-    git checkout a7f1f5c4ac52503cc95bf1d27498098b3093a0df
     ```
-    
-2. Run the default test suite:
+
+2. Run the default test suite using the dockerfile:
+   > Note: You may need to download docker desktop (https://www.docker.com/products/docker-desktop/)
     
     ```bash
-    mvn test
+    docker build -t fastjson-test .
+    docker run --rm fastjson-test
     ```
     
     - **Q1: Do any tests fail?**
+  
+
 
 ## Step 1: Reverse Execution Order
 
-1. Run the suite in **reverse order**:
+1. Run the suite in **reverse order** by modifying by dockerfile:
     
     ```bash
     mvn test -Dsurefire.runOrder=reversealphabetical
@@ -37,7 +40,7 @@ Order-dependent (OD) tests are tests that pass or fail depending on the order in
 
 ## Step 2: Random Execution Order
 
-1. Run the suite with **random order**:
+1. Run the suite with **random order** by modifying dockerfile:
     
     ```bash
     mvn test -Dsurefire.runOrder=random
@@ -48,7 +51,7 @@ Order-dependent (OD) tests are tests that pass or fail depending on the order in
 
 ## Step 3: Run in Parallel
 
-Enable parallel execution:
+Enable parallel execution by modifying dockerfile:
 
 ```bash
 mvn test -Dsurefire.parallel=all -Dsurefire.threadCount=4
@@ -72,8 +75,14 @@ Write a small **Bash Script** to run each test class in isolation:
 
 ## Deliverables
 
-- A short report (`report.md`) containing:
+- A short report at the end of this (`readme.md`) under `Answer` containing:
     - **Q1–Q5 answers** with copy-pasted failure logs.
     - Reflection answers.
 - Your **Bash script** used in Step 4
 - Discussion about how you fixed the bug (bonus)
+
+---
+# Answer
+[todo]
+
+
